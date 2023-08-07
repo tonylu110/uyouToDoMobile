@@ -1,13 +1,23 @@
 import React from 'react';
-import {View, Text, StatusBar, useColorScheme} from 'react-native';
+import {
+  View,
+  Text,
+  StatusBar,
+  useColorScheme,
+  TouchableOpacity,
+} from 'react-native';
 import style from './style';
-import {CaretLeft, PlusCircle} from 'phosphor-react-native';
+import {CaretLeft, House, PlusCircle} from 'phosphor-react-native';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
 interface TabProps {
   title?: string;
   leftIcon?: JSX.Element;
   rightButtonShow?: boolean;
   leftButtonShow?: boolean;
+  leftButtonFn?: () => void;
+  showHome?: boolean;
+  navigation: NativeStackScreenProps<any>['navigation'];
 }
 
 function TabBar(props: TabProps): JSX.Element {
@@ -19,20 +29,43 @@ function TabBar(props: TabProps): JSX.Element {
       <View style={style.tabBar}>
         <View style={style.titleTop}>
           {props.leftButtonShow ? (
-            <View
-              style={[
-                style.button,
-                {backgroundColor: isDarkMode ? '#333' : '#ddd'},
-              ]}>
-              {props.leftIcon ? (
-                props.leftIcon
-              ) : (
-                <CaretLeft
-                  weight={'bold'}
-                  color={isDarkMode ? '#aaa' : '#555'}
-                />
-              )}
-            </View>
+            <TouchableOpacity
+              onPress={() => {
+                if (props.leftButtonFn) {
+                  props.leftButtonFn();
+                } else {
+                  props.navigation.goBack();
+                }
+              }}>
+              <View
+                style={[
+                  style.button,
+                  {
+                    backgroundColor: isDarkMode ? '#333' : '#ddd',
+                    marginRight: 10,
+                  },
+                ]}>
+                {props.leftIcon ? (
+                  props.leftIcon
+                ) : (
+                  <CaretLeft
+                    weight={'bold'}
+                    color={isDarkMode ? '#aaa' : '#555'}
+                  />
+                )}
+              </View>
+            </TouchableOpacity>
+          ) : null}
+          {props.showHome ? (
+            <TouchableOpacity onPress={() => props.navigation.navigate('Home')}>
+              <View
+                style={[
+                  style.button,
+                  {backgroundColor: isDarkMode ? '#333' : '#ddd'},
+                ]}>
+                <House weight={'bold'} color={isDarkMode ? '#aaa' : '#555'} />
+              </View>
+            </TouchableOpacity>
           ) : null}
         </View>
         <View style={style.titleBottom}>
