@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, ScrollView, Text, useColorScheme} from 'react-native';
+import {View, ScrollView, useColorScheme} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import style from './style';
 import TabBar from '../../components/TabBar';
+import ToDoList from '../../components/ToDoList';
 
 function Home(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -13,13 +14,11 @@ function Home(): JSX.Element {
 
   return (
     <View style={style.Background}>
-      <TabBar />
+      <TabBar title={'uyou ToDo'} />
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <View>
-          <Text>hello uyou ToDo!</Text>
-        </View>
+        <ToDoList />
       </ScrollView>
     </View>
   );

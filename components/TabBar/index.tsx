@@ -2,10 +2,14 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import style from './style';
 
-function TabBar(): JSX.Element {
+interface TabProps {
+  title?: string;
+}
+
+function TabBar(props: TabProps): JSX.Element {
   return (
     <View style={style.tabBar}>
-      <Text style={style.title}>Title</Text>
+      <Text style={style.title}>{props.title}</Text>
     </View>
   );
 }
