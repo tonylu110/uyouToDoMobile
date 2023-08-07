@@ -4,7 +4,11 @@ import ToDoItem from './ToDoItem';
 import style from './style';
 
 function ToDoList(): JSX.Element {
-  const list = new Array(10).fill('123456789');
+  const list = new Array(10).fill({
+    id: new Date().getTime(),
+    text: '123456789',
+    ok: false,
+  });
 
   const setOk = (id: number, isOk: boolean) => {
     console.log(id + (isOk + ''));
@@ -15,8 +19,8 @@ function ToDoList(): JSX.Element {
       {list.map((item, index) => (
         <ToDoItem
           item={{
-            id: index,
-            text: item,
+            id: item.id,
+            text: item.text,
             ok: index % 2 === 0,
           }}
           onSetOk={setOk}

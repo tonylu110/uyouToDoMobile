@@ -3,6 +3,7 @@ import {Text, View} from 'react-native';
 import style from './style';
 import ToDo from '../../../type/ToDo';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
+import getTime from '../../../utils/getTime';
 
 interface ItemProps {
   item: ToDo;
@@ -11,8 +12,6 @@ interface ItemProps {
 
 function ToDoItem(props: ItemProps): JSX.Element {
   const [ok, setOk] = useState(props.item.ok);
-
-  console.log(ok);
 
   return (
     <View style={style.ListItem}>
@@ -27,9 +26,11 @@ function ToDoItem(props: ItemProps): JSX.Element {
           }}
         />
       </View>
-      <View>
-        <Text>{props.item.id}</Text>
-        <Text style={ok ? style.textOk : style.text}>{props.item.text}</Text>
+      <View style={style.textArea}>
+        <View>
+          <Text style={ok ? style.textOk : style.text}>{props.item.text}</Text>
+        </View>
+        <Text style={style.time}>{getTime(props.item.id)}</Text>
       </View>
     </View>
   );

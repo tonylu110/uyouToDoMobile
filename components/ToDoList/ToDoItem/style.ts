@@ -20,6 +20,14 @@ const style = StyleSheet.create({
     fontSize: 20,
     textDecorationLine: 'line-through',
   },
+  time: {
+    marginTop: 5,
+    color: '#aaaaaa',
+  },
+  textArea: {
+    flexShrink: 1,
+    width: '100%',
+  },
 });
 
 export default style;
