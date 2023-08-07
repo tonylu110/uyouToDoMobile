@@ -28,7 +28,6 @@ const style = StyleSheet.create({
     height: 42,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#ddd',
   },
 });
 

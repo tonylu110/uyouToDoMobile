@@ -316,7 +316,7 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="alert_description" translatable="false">Alert</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
-    <string name="app_name">uyouToDoMobile</string>
+    <string name="app_name">uyou ToDo</string>
     <string name="catalyst_change_bundle_location" project="catalyst" translatable="false">Change Bundle Location</string>
     <string name="catalyst_copy_button" project="catalyst" translatable="false">Copy\n</string>
     <string name="catalyst_debug" project="catalyst" translatable="false">Debug</string>
