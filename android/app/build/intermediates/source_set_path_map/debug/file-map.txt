@@ -25,3 +25,5 @@ com.uyoutodomobile.app-mergeDebugResources-23 C:\Users\luxia\Documents\GitHub\uy
 com.uyoutodomobile.app-merged_res-24 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\build\intermediates\merged_res\debug
 com.uyoutodomobile.app-debug-25 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\src\debug\res
 com.uyoutodomobile.app-main-26 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\src\main\res
+com.uyoutodomobile.app-packaged_res-27 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug
+com.uyoutodomobile.app-packaged_res-28 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\react-native-svg\android\build\intermediates\packaged_res\debug

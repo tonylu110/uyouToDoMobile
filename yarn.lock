@@ -5433,6 +5433,11 @@ react-native-bouncy-checkbox@^3.0.7:
   resolved "https://registry.npmmirror.com/react-native-bouncy-checkbox/-/react-native-bouncy-checkbox-3.0.7.tgz#011aef92b4fbde2a1f223165626c56a9ffe637fb"
   integrity sha512-776TgMGt9wTpOQA1TcvFjL5VUn6o945wFYf3Ztqva62/vT2o3JAezLiP7hYh2Svd+PewfWBYSPMs4jeaSoS8Sg==
 
+react-native-safe-area-context@^4.7.1:
+  version "4.7.1"
+  resolved "https://registry.npmmirror.com/react-native-safe-area-context/-/react-native-safe-area-context-4.7.1.tgz#b7be2d68dee909717cfa439bb5c7966042d231e8"
+  integrity sha512-X2pJG2ttmAbiGlItWedvDkZg1T1ikmEDiz+7HsiIwAIm2UbFqlhqn+B1JF53mSxPzdNaDcCQVHRNPvj8oFu6Yg==
+
 react-native-svg@^13.10.0:
   version "13.10.0"
   resolved "https://registry.npmmirror.com/react-native-svg/-/react-native-svg-13.10.0.tgz#d3c6222ea9cc1e21e2af0fd59dfbeafe7a3d0dc1"

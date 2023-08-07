@@ -1,10 +1,11 @@
 import React from 'react';
-import {View, ScrollView, useColorScheme} from 'react-native';
+import {View, ScrollView, useColorScheme, StatusBar} from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import style from './style';
 import TabBar from '../../components/TabBar';
 import ToDoList from '../../components/ToDoList';
 import {GearSix} from 'phosphor-react-native';
+import getNavigationBarHeight from '../../utils/getNavigationBarHeight';
 
 function Home(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -15,8 +16,9 @@ function Home(): JSX.Element {
 
   return (
     <View style={style.Background}>
+      <View style={{height: StatusBar.currentHeight}} />
       <TabBar
-        title={'uyou ToDo'}
+        title={'所有 ToDo'}
         leftButtonShow={true}
         rightButtonShow={true}
         leftIcon={<GearSix weight={'fill'} color={'#555'} />}
@@ -25,6 +27,7 @@ function Home(): JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <ToDoList />
+        <View style={{height: getNavigationBarHeight}} />
       </ScrollView>
     </View>
   );

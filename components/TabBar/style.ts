@@ -8,7 +8,9 @@ const style = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: 20,
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginTop: 5,
   },
   titleTop: {
     flexDirection: 'row',
@@ -22,8 +24,8 @@ const style = StyleSheet.create({
   },
   button: {
     borderRadius: 8,
-    width: 36,
-    height: 36,
+    width: 42,
+    height: 42,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#ddd',

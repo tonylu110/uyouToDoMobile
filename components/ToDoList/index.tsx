@@ -4,10 +4,12 @@ import ToDoItem from './ToDoItem';
 import style from './style';
 
 function ToDoList(): JSX.Element {
-  const list = new Array(10).fill({
-    id: new Date().getTime(),
-    text: '123456789',
-    ok: false,
+  const list = new Array(10).fill('').map((_item, index) => {
+    return {
+      id: new Date().getTime() + index,
+      text: '123456789' + index,
+      ok: index % 2 === 0,
+    };
   });
 
   const setOk = (id: number, isOk: boolean) => {
@@ -21,10 +23,10 @@ function ToDoList(): JSX.Element {
           item={{
             id: item.id,
             text: item.text,
-            ok: index % 2 === 0,
+            ok: item.ok,
           }}
           onSetOk={setOk}
-          key={index}
+          key={item.id}
         />
       ))}
     </View>

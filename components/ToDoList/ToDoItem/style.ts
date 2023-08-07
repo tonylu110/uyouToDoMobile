@@ -19,6 +19,7 @@ const style = StyleSheet.create({
   textOk: {
     fontSize: 20,
     textDecorationLine: 'line-through',
+    color: '#aaaaaa',
   },
   time: {
     marginTop: 5,
