@@ -25,12 +25,7 @@ function Settings({navigation}: NativeStackScreenProps<any>): JSX.Element {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <View style={{height: '100%'}}>
-        <TabBar
-          title={'设置'}
-          leftButtonShow={true}
-          navigation={navigation}
-          showHome={true}
-        />
+        <TabBar title={'设置'} leftButtonShow={true} navigation={navigation} />
         <ContextView>
           <Text>settings</Text>
         </ContextView>

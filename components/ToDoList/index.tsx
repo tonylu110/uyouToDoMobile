@@ -18,7 +18,7 @@ function ToDoList(): JSX.Element {
 
   return (
     <View style={style.List}>
-      {list.map((item, index) => (
+      {list.map(item => (
         <ToDoItem
           item={{
             id: item.id,

@@ -21,8 +21,8 @@ function ToDoItem(props: ItemProps): JSX.Element {
       <View style={style.checkBox}>
         <BouncyCheckbox
           isChecked={ok}
-          unfillColor="#FFFFFF"
-          fillColor="#5985eb"
+          unfillColor={isDarkMode ? '#777777' : '#ffffff'}
+          fillColor={isDarkMode ? '#4e6fbb' : '#5985eb'}
           onPress={isChecked => {
             props.onSetOk(props.item.id, isChecked);
             setOk(isChecked);

@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.uyoutodomobile"
+3    package="cn.org.uyou.todo.mobile"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
@@ -20,8 +20,8 @@
 14
 15    <application
 15-->C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\src\main\AndroidManifest.xml:5:5-24:19
-16        android:name="com.uyoutodomobile.MainApplication"
-16-->C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\src\main\AndroidManifest.xml:6:7-38
+16        android:name="cn.org.uyou.todo.mobile.MainApplication"
+16-->C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\src\main\AndroidManifest.xml:6:7-61
 17        android:allowBackup="false"
 17-->C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\src\main\AndroidManifest.xml:10:7-34
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -45,8 +45,8 @@
 27-->C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\src\debug\AndroidManifest.xml:11:84-108
 28        <activity
 28-->C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\src\main\AndroidManifest.xml:12:7-23:18
-29            android:name="com.uyoutodomobile.MainActivity"
-29-->C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\src\main\AndroidManifest.xml:13:9-37
+29            android:name="cn.org.uyou.todo.mobile.MainActivity"
+29-->C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\src\main\AndroidManifest.xml:13:9-60
 30            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
 30-->C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\src\main\AndroidManifest.xml:15:9-118
 31            android:exported="true"
@@ -80,7 +80,7 @@
 46-->[androidx.emoji2:emoji2:1.0.0] C:\Users\luxia\.gradle\caches\transforms-3\223146ef33e3aa619e8b04649706e145\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
 47            android:name="androidx.startup.InitializationProvider"
 47-->[androidx.emoji2:emoji2:1.0.0] C:\Users\luxia\.gradle\caches\transforms-3\223146ef33e3aa619e8b04649706e145\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-48            android:authorities="com.uyoutodomobile.androidx-startup"
+48            android:authorities="cn.org.uyou.todo.mobile.androidx-startup"
 48-->[androidx.emoji2:emoji2:1.0.0] C:\Users\luxia\.gradle\caches\transforms-3\223146ef33e3aa619e8b04649706e145\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
 49            android:exported="false" >
 49-->[androidx.emoji2:emoji2:1.0.0] C:\Users\luxia\.gradle\caches\transforms-3\223146ef33e3aa619e8b04649706e145\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37

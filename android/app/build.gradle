@@ -73,9 +73,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.uyoutodomobile"
+    namespace "cn.org.uyou.todo.mobile"
     defaultConfig {
-        applicationId "com.uyoutodomobile"
+        applicationId "cn.org.uyou.todo.mobile"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
