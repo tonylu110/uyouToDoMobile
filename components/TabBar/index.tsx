@@ -18,6 +18,7 @@ interface TabProps {
   leftButtonFn?: () => void;
   showHome?: boolean;
   navigation: NativeStackScreenProps<any>['navigation'];
+  showAdd: () => void;
 }
 
 function TabBar(props: TabProps): JSX.Element {
@@ -73,16 +74,18 @@ function TabBar(props: TabProps): JSX.Element {
             {props.title ? props.title : 'title'}
           </Text>
           {props.rightButtonShow ? (
-            <View
-              style={[
-                style.button,
-                {backgroundColor: isDarkMode ? '#333' : '#ddd'},
-              ]}>
-              <PlusCircle
-                weight={'bold'}
-                color={isDarkMode ? '#aaa' : '#555'}
-              />
-            </View>
+            <TouchableOpacity onPress={() => props.showAdd()}>
+              <View
+                style={[
+                  style.button,
+                  {backgroundColor: isDarkMode ? '#333' : '#ddd'},
+                ]}>
+                <PlusCircle
+                  weight={'bold'}
+                  color={isDarkMode ? '#aaa' : '#555'}
+                />
+              </View>
+            </TouchableOpacity>
           ) : null}
         </View>
       </View>

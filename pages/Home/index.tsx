@@ -23,6 +23,8 @@ function Home({navigation}: NativeStackScreenProps<any>): JSX.Element {
     setTodoList(res);
   });
 
+  const [showAdd, setShowAdd] = useState(false);
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -39,9 +41,10 @@ function Home({navigation}: NativeStackScreenProps<any>): JSX.Element {
           }
           leftButtonFn={() => navigation.navigate('Settings')}
           navigation={navigation}
+          showAdd={() => setShowAdd(!showAdd)}
         />
         <ContextView>
-          <ToDoList list={todoList} />
+          <ToDoList list={todoList} showAdd={showAdd} />
         </ContextView>
       </View>
     </SafeAreaView>
