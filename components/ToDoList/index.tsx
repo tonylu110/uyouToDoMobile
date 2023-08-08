@@ -18,25 +18,34 @@ function ToDoList(props: ToDoListProps): JSX.Element {
     setList(props.list);
   }, [props.list]);
 
-  const setOk = (id: number, isOk: boolean) => {
-    list.forEach(item => {
-      if (item.id === id) {
-        item.ok = isOk;
-      }
-    });
+  const changeToDo = (
+    id: number,
+    isOk: boolean,
+    text: string,
+    changName: string,
+  ) => {
+    if (changName === 'setOk') {
+      list.forEach(item => {
+        if (item.id === id) {
+          item.ok = isOk;
+        }
+      });
+    } else if (changName === 'add') {
+      list.unshift({
+        id,
+        text,
+        ok: isOk,
+      });
+      setShowAdd(false);
+    } else if (changName === 'remove') {
+      list.forEach((item, index) => {
+        if (item.id === id) {
+          list.splice(index, 1);
+        }
+      });
+    }
     setList(list);
     setToDoData(list);
-  };
-
-  const addToDo = (text: string) => {
-    list.unshift({
-      id: new Date().getTime(),
-      text,
-      ok: false,
-    });
-    setList(list);
-    setToDoData(list);
-    setShowAdd(false);
   };
 
   const [showAdd, setShowAdd] = useState(false);
@@ -47,7 +56,10 @@ function ToDoList(props: ToDoListProps): JSX.Element {
   return (
     <View style={style.List}>
       {showAdd ? (
-        <AddItem addToDo={addToDo} showAdd={() => setShowAdd(false)} />
+        <AddItem
+          addToDo={text => changeToDo(new Date().getTime(), false, text, 'add')}
+          showAdd={() => setShowAdd(false)}
+        />
       ) : null}
       {list.map(item => (
         <ToDoItem
@@ -56,7 +68,8 @@ function ToDoList(props: ToDoListProps): JSX.Element {
             text: item.text,
             ok: item.ok,
           }}
-          onSetOk={setOk}
+          onSetOk={(id, isOk) => changeToDo(id, isOk, '', 'setOk')}
+          remove={id => changeToDo(id, false, '', 'remove')}
           key={item.id}
         />
       ))}
