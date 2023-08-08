@@ -4,7 +4,8 @@ import style from './style';
 import ToDo from '../../../type/ToDo';
 import BouncyCheckbox from 'react-native-bouncy-checkbox';
 import getTime from '../../../utils/getTime';
-import {Button, Divider, Menu} from 'react-native-paper';
+import {Menu} from 'react-native-paper';
+import Clipboard from '@react-native-clipboard/clipboard';
 
 interface ItemProps {
   item: ToDo;
@@ -24,7 +25,7 @@ function ToDoItem(props: ItemProps): JSX.Element {
   const closeMenu = () => setVisible(false);
 
   return (
-    <TouchableOpacity onLongPress={openMenu}>
+    <TouchableOpacity onLongPress={openMenu} delayLongPress={300}>
       <View
         style={[
           style.ListItem,
@@ -60,7 +61,10 @@ function ToDoItem(props: ItemProps): JSX.Element {
           visible={visible}
           onDismiss={closeMenu}
           anchor={<Text style={{opacity: 0}}>1</Text>}>
-          <Menu.Item onPress={() => {}} title="复制" />
+          <Menu.Item
+            onPress={() => Clipboard.setString(props.item.text)}
+            title="复制"
+          />
           <Menu.Item onPress={() => props.remove(props.item.id)} title="删除" />
         </Menu>
       </View>
