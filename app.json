@@ -1,4 +1,15 @@
 {
   "name": "uyouToDoMobile",
-  "displayName": "uyouToDoMobile"
+  "displayName": "uyouToDoMobile",
+  "expo": {
+    "name": "uyouToDoMobile",
+    "extra": {
+      "eas": {
+        "projectId": "9310787a-01dd-4305-8ab1-c5e528273bf7"
+      }
+    },
+    "android": {
+      "package": "cn.org.uyou.todo.mobile"
+    }
+  }
 }

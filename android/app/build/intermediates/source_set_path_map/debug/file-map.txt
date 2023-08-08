@@ -32,9 +32,11 @@ cn.org.uyou.todo.mobile.app-mergeDebugResources-30 C:\Users\luxia\Documents\GitH
 cn.org.uyou.todo.mobile.app-merged_res-31 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\build\intermediates\merged_res\debug
 cn.org.uyou.todo.mobile.app-debug-32 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\src\debug\res
 cn.org.uyou.todo.mobile.app-main-33 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\android\app\src\main\res
-cn.org.uyou.todo.mobile.app-packaged_res-34 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\@react-native-community\masked-view\android\build\intermediates\packaged_res\debug
-cn.org.uyou.todo.mobile.app-packaged_res-35 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\react-native-gesture-handler\android\build\intermediates\packaged_res\debug
-cn.org.uyou.todo.mobile.app-packaged_res-36 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\react-native-reanimated\android\build\intermediates\packaged_res\debug
-cn.org.uyou.todo.mobile.app-packaged_res-37 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug
-cn.org.uyou.todo.mobile.app-packaged_res-38 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug
-cn.org.uyou.todo.mobile.app-packaged_res-39 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\react-native-svg\android\build\intermediates\packaged_res\debug
+cn.org.uyou.todo.mobile.app-packaged_res-34 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\packaged_res\debug
+cn.org.uyou.todo.mobile.app-packaged_res-35 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\@react-native-clipboard\clipboard\android\build\intermediates\packaged_res\debug
+cn.org.uyou.todo.mobile.app-packaged_res-36 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\@react-native-community\masked-view\android\build\intermediates\packaged_res\debug
+cn.org.uyou.todo.mobile.app-packaged_res-37 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\react-native-gesture-handler\android\build\intermediates\packaged_res\debug
+cn.org.uyou.todo.mobile.app-packaged_res-38 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\react-native-reanimated\android\build\intermediates\packaged_res\debug
+cn.org.uyou.todo.mobile.app-packaged_res-39 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug
+cn.org.uyou.todo.mobile.app-packaged_res-40 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug
+cn.org.uyou.todo.mobile.app-packaged_res-41 C:\Users\luxia\Documents\GitHub\uyouToDoMobile\node_modules\react-native-svg\android\build\intermediates\packaged_res\debug
