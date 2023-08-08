@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, useColorScheme, SafeAreaView, StatusBar} from 'react-native';
 import style from './style';
 import TabBar from '../../components/TabBar';
@@ -7,7 +7,7 @@ import {GearSix} from 'phosphor-react-native';
 import ContextView from '../../components/ContextView';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
-import setupToDo from '../../utils/setupToDo';
+import {setupToDo} from '../../utils/setupToDo';
 import ToDo from '../../type/ToDo';
 
 function Home({navigation}: NativeStackScreenProps<any>): JSX.Element {

@@ -3,6 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 async function setToDo(data: string) {
   try {
     await AsyncStorage.setItem('todo', data);
+    console.log(data);
   } catch (e) {
     console.error(e);
   }
@@ -43,4 +44,4 @@ function setupToDo() {
   });
 }
 
-export default setupToDo;
+export {setupToDo, setToDo};
