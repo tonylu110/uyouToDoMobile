@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, useColorScheme, SafeAreaView, StatusBar} from 'react-native';
 import style from './style';
 import TabBar from '../../components/TabBar';
@@ -7,6 +7,8 @@ import {GearSix} from 'phosphor-react-native';
 import ContextView from '../../components/ContextView';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import type {NativeStackScreenProps} from '@react-navigation/native-stack';
+import setupToDo from '../../utils/setupToDo';
+import ToDo from '../../type/ToDo';
 
 function Home({navigation}: NativeStackScreenProps<any>): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -14,6 +16,12 @@ function Home({navigation}: NativeStackScreenProps<any>): JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  const [todoList, setTodoList] = useState<ToDo[]>([]);
+
+  setupToDo().then((res: ToDo[]) => {
+    setTodoList(res);
+  });
 
   return (
     <SafeAreaView style={backgroundStyle}>
@@ -33,7 +41,7 @@ function Home({navigation}: NativeStackScreenProps<any>): JSX.Element {
           navigation={navigation}
         />
         <ContextView>
-          <ToDoList />
+          <ToDoList list={todoList} />
         </ContextView>
       </View>
     </SafeAreaView>

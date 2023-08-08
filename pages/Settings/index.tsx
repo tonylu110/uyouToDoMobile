@@ -27,9 +27,9 @@ function Settings({navigation}: NativeStackScreenProps<any>): JSX.Element {
     setAppVersion(event);
   });
 
-  NativeModules.RNToolsManager.getVersionCode((event: number) => {
-    console.log(event);
-  });
+  // NativeModules.RNToolsManager.getVersionCode((event: number) => {
+  //   console.log(event);
+  // });
 
   return (
     <SafeAreaView style={backgroundStyle}>

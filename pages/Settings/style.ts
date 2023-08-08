@@ -16,6 +16,7 @@ const style = StyleSheet.create({
     padding: 20,
     alignItems: 'center',
     justifyContent: 'space-between',
+    marginBottom: 10,
   },
   logoImg: {
     height: 110,

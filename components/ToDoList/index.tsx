@@ -2,23 +2,20 @@ import React from 'react';
 import {View} from 'react-native';
 import ToDoItem from './ToDoItem';
 import style from './style';
+import ToDo from '../../type/ToDo';
 
-function ToDoList(): JSX.Element {
-  const list = new Array(10).fill('').map((_item, index) => {
-    return {
-      id: new Date().getTime() + index,
-      text: '123456789' + index,
-      ok: index % 2 === 0,
-    };
-  });
+interface ToDoListProps {
+  list: ToDo[];
+}
 
+function ToDoList(props: ToDoListProps): JSX.Element {
   const setOk = (id: number, isOk: boolean) => {
     console.log(id + (isOk + ''));
   };
 
   return (
     <View style={style.List}>
-      {list.map(item => (
+      {props.list.map(item => (
         <ToDoItem
           item={{
             id: item.id,
