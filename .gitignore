@@ -127,3 +127,9 @@ dist
 .pnp.*
 
 .idea
+tmp
+debug
+
+android/build
+android/app/build
+android/.gradle/
