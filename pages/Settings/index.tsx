@@ -60,7 +60,10 @@ function Settings({navigation}: NativeStackScreenProps<any>): JSX.Element {
                 uyou ToDo {appVersion}
               </Text>
             </View>
-            <SettingItem title={'我的账号'} />
+            <SettingItem
+              title={'我的账号'}
+              onItemPress={() => navigation.navigate('Account')}
+            />
             <SettingBox.Box>
               <SettingBox.Item
                 title={'自动更新'}
@@ -71,7 +74,11 @@ function Settings({navigation}: NativeStackScreenProps<any>): JSX.Element {
                   onChange={() => setSwitchState(!switchState)}
                 />
               </SettingBox.Item>
-              <SettingBox.Item title={'应用更新'} borderHidden={true} />
+              <SettingBox.Item
+                title={'应用更新'}
+                borderHidden={true}
+                onItemPress={() => navigation.navigate('Update')}
+              />
             </SettingBox.Box>
           </View>
         </ContextView>
