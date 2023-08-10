@@ -18,7 +18,7 @@ interface TabProps {
   leftButtonFn?: () => void;
   showHome?: boolean;
   navigation: NativeStackScreenProps<any>['navigation'];
-  showAdd: () => void;
+  showAdd?: () => void;
 }
 
 function TabBar(props: TabProps): JSX.Element {
@@ -74,7 +74,7 @@ function TabBar(props: TabProps): JSX.Element {
             {props.title ? props.title : 'title'}
           </Text>
           {props.rightButtonShow ? (
-            <TouchableOpacity onPress={() => props.showAdd()}>
+            <TouchableOpacity onPress={() => props.showAdd!()}>
               <View
                 style={[
                   style.button,

@@ -13,6 +13,9 @@ import ContextView from '../../components/ContextView';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import style from './style';
+import SettingItem from '../../components/SettingItem';
+import SettingBox from '../../components/SettingItem/Box';
+import {Switch} from 'react-native-paper';
 
 function Settings({navigation}: NativeStackScreenProps<any>): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -30,6 +33,8 @@ function Settings({navigation}: NativeStackScreenProps<any>): JSX.Element {
   // NativeModules.RNToolsManager.getVersionCode((event: number) => {
   //   console.log(event);
   // });
+
+  const [switchState, setSwitchState] = useState(false);
 
   return (
     <SafeAreaView style={backgroundStyle}>
@@ -55,6 +60,19 @@ function Settings({navigation}: NativeStackScreenProps<any>): JSX.Element {
                 uyou ToDo {appVersion}
               </Text>
             </View>
+            <SettingItem title={'我的账号'} />
+            <SettingBox.Box>
+              <SettingBox.Item
+                title={'自动更新'}
+                hiddenArrow={true}
+                onItemPress={() => setSwitchState(!switchState)}>
+                <Switch
+                  value={switchState}
+                  onChange={() => setSwitchState(!switchState)}
+                />
+              </SettingBox.Item>
+              <SettingBox.Item title={'应用更新'} borderHidden={true} />
+            </SettingBox.Box>
           </View>
         </ContextView>
       </View>
